@@ -35,7 +35,7 @@ public class PoliceOfficer implements Damageable {
     private void checkHealthState() {
         if(health <= 0) { states.clear(); states.add(new DeadState()); }
         else if(health <= 10) { states.clear(); states.add(new UnconsciousState()); }
-        else if(health >= 70 && states.isEmpty()) { states.add(new NormalState()); }
+        else if(health >= 90) { states.add(new NormalState()); }
     }
 
     public boolean isAlive() { return health > 0; }
